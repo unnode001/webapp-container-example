@@ -64,3 +64,15 @@ curl http://localhost:8080/api/deployment                  # 部署统计
 ab -n 1000 -c 50 http://localhost:8080/
 ab -n 500 -c 20 http://localhost:8080/api/status
 ```
+
+## 开发流程
+**应用程序被分为五个阶段性的模块化实现**
+
+| 阶段 | 功能特性 | 核心技术 | 状态 |
+|-----|---------|---------|------|
+| **第一阶段** | 基础HTTP服务器 | TCP监听、HTTP解析、多线程BIO | ✅ 完成 |
+| **第二阶段** | 静态与动态资源 | 静态文件服务、自定义Servlet | ✅ 完成 |
+| **第三阶段** | 标准Servlet API | javax.servlet规范、生命周期管理 | ✅ 完成 |
+| **第四阶段** | 会话管理与并发优化 | HttpSession、Cookie、线程池 | ✅ 完成 |
+| **第五阶段** | Web应用隔离与动态部署 | ClassLoader隔离、热加载、多应用 | ✅ 完成 |
+
