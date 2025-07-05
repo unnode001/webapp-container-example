@@ -1,0 +1,233 @@
+# ===========================================
+# 轻量级Web容器项目 - Git忽略文件
+# ===========================================
+
+# ===========================================
+# Java编译输出
+# ===========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+docs/
+.github/
+
+# ===========================================
+# Maven构建输出
+# ===========================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ===========================================
+# IDE配置文件
+# ===========================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# ===========================================
+# 操作系统文件
+# ===========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================
+# 项目特定文件
+# ===========================================
+
+# 日志文件
+*.log
+logs/
+log/
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 会话文件（如果有持久化实现）
+sessions/
+*.session
+
+# 配置文件（包含敏感信息的）
+config/local.properties
+*.local
+local.env
+
+# 测试输出
+test-output/
+coverage/
+jacoco.exec
+
+# 部署包
+deploy/
+dist/
+
+# 备份文件
+*.backup
+*.old
+backup/
+
+# 性能测试结果
+benchmark/
+performance/
+*.jfr
+
+# ===========================================
+# Web应用临时文件
+# ===========================================
+
+# 上传的临时文件
+uploads/temp/
+temp-uploads/
+
+# 缓存文件
+cache/
+*.cache
+
+# 编译的JSP文件（如果支持JSP）
+work/
+*.jsp.java
+*.jsp.class
+
+# ===========================================
+# 开发工具
+# ===========================================
+
+# JProfiler
+*.jpf
+
+# YourKit
+*.yrp
+
+# Spring Tool Suite
+.apt_generated
+.apt_generated_test
+
+# Package Files
+*.zip
+*.tar.gz
+*.rar
+
+# ===========================================
+# 安全相关（不应提交的敏感文件）
+# ===========================================
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+keystore
+truststore
+secrets/
+.env
+
+# ===========================================
+# 其他
+# ===========================================
+
+# 编辑器临时文件
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# Gradle (如果将来添加Gradle支持)
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Node.js (如果添加前端构建工具)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 本地环境变量文件
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

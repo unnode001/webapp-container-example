@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - 轻量级Web容器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 关于项目</h1>
+            <p class="subtitle">了解轻量级Web容器的设计理念</p>
+        </header>
+
+        <main>
+            <div class="info-section">
+                <h2>设计理念</h2>
+                <p>本项目遵循"<strong>协议为本，逐层抽象</strong>"的原则。我们从最底层的HTTP协议交互开始，构建一个能直接通信的服务器。然后，在此基础上逐步抽象和实现Servlet规范，最终构建出一个能够加载和管理Web应用的容器。
+                </p>
+            </div>
+
+            <div class="info-section">
+                <h2>技术特性</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🔧 纯Java实现</h3>
+                        <p>不依赖任何外部Web框架，完全使用Java标准库实现</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📚 教学导向</h3>
+                        <p>代码结构清晰，注释详细，适合学习Web容器原理</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ 渐进式开发</h3>
+                        <p>分为五个阶段，每个阶段都可独立验证和运行</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>开发阶段</h2>
+                <div class="stage-list">
+                    <div class="stage completed">
+                        <span class="stage-number">1</span>
+                        <div class="stage-content">
+                            <h4>地基工程 - 基础HTTP服务器</h4>
+                            <p>实现TCP连接监听、HTTP请求解析和响应构建。使用BIO模型（一连接一线程），能够处理基本的HTTP请求并返回硬编码的HTML响应。</p>
+                        </div>
+                    </div>
+                    <div class="stage completed">
+                        <span class="stage-number">2</span>
+                        <div class="stage-content">
+                            <h4>内容分发 - 静态与动态资源</h4>
+                            <p>添加静态文件服务器功能，支持HTML、CSS、JS等文件。引入自定义MyServlet接口，通过反射机制动态加载Servlet处理业务逻辑。</p>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-number">3</span>
+                        <div class="stage-content">
+                            <h4>拥抱标准 - Servlet API核心</h4>
+                            <p>实现标准的javax.servlet.http.HttpServletRequest和HttpServletResponse接口，添加Servlet生命周期管理，支持web.xml配置文件解析。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-number">4</span>
+                        <div class="stage-content">
+                            <h4>健壮与高效 - 会话管理与并发优化</h4>
+                            <p>实现HttpSession会话管理，支持Cookie和会话跟踪。将BIO模型升级为线程池模型，提升并发处理能力。</p>
+                        </div>
+                    </div>
+                    <div class="stage">
+                        <span class="stage-number">5</span>
+                        <div class="stage-content">
+                            <h4>走向成熟 - Web应用隔离与部署</h4>
+                            <p>实现Web应用类加载器隔离，支持多应用独立运行。添加部署器支持动态部署WAR包和应用热部署。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>核心组件</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <strong>SimpleWebServer</strong> - 主服务器类，负责监听端口和接收连接
+                    </li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <strong>RequestHandler</strong> - 请求处理器，解析HTTP请求并构建响应
+                    </li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <strong>StaticResourceHandler</strong> - 静态资源处理器，服务HTML、CSS、JS等文件
+                    </li>
+                    <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                        <strong>MyServlet</strong> - 自定义Servlet接口，用于处理动态内容
+                    </li>
+                    <li style="padding: 10px 0;">
+                        <strong>HttpRequest/HttpResponse</strong> - HTTP请求和响应封装类
+                    </li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/" class="btn">← 返回首页</a>
+                <a href="/hello" class="btn">体验Servlet</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 轻量级Web容器 - 教学演示项目</p>
+        </footer>
+    </div>
+</body>
+
+</html>

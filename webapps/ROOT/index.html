@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轻量级Web容器 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 轻量级Web容器</h1>
+            <p class="subtitle">从零构建的Web应用服务器</p>
+        </header>
+
+        <main>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📄 静态资源</h3>
+                    <p>支持HTML、CSS、JS等静态文件服务</p>
+                    <a href="about.html" class="btn">了解更多</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>⚡ 动态内容</h3>
+                    <p>自定义Servlet处理动态请求</p>
+                    <a href="/hello" class="btn">体验Servlet</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🎯 标准Servlet</h3>
+                    <p>符合javax.servlet规范的标准实现</p>
+                    <a href="/servlet" class="btn">标准Servlet</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔌 API接口</h3>
+                    <p>RESTful API接口支持JSON响应</p>
+                    <a href="/api" class="btn">API文档</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>👤 会话管理</h3>
+                    <p>HttpSession会话状态管理演示</p>
+                    <a href="/session" class="btn">会话演示</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📊 会话统计</h3>
+                    <p>会话监控和统计信息API</p>
+                    <a href="/api/sessions" class="btn">会话统计</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🏗️ 应用隔离</h3>
+                    <p>独立ClassLoader的Web应用容器</p>
+                    <a href="/context" class="btn">Context演示</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🚀 动态部署</h3>
+                    <p>热加载和多应用部署监控</p>
+                    <a href="/api/deployment" class="btn">部署统计</a>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>当前实现阶段</h2>
+                <div class="stage-list">
+                    <div class="stage completed">
+                        <span class="stage-number">1</span>
+                        <div class="stage-content">
+                            <h4>基础HTTP服务器</h4>
+                            <p>✅ TCP连接监听、HTTP请求解析、响应构建</p>
+                        </div>
+                    </div>
+                    <div class="stage completed">
+                        <span class="stage-number">2</span>
+                        <div class="stage-content">
+                            <h4>静态与动态资源</h4>
+                            <p>✅ 静态文件服务、自定义Servlet概念</p>
+                        </div>
+                    </div>
+                    <div class="stage completed">
+                        <span class="stage-number">3</span>
+                        <div class="stage-content">
+                            <h4>标准Servlet API</h4>
+                            <p>✅ 实现javax.servlet规范、Servlet生命周期管理</p>
+                        </div>
+                    </div>
+                    <div class="stage completed">
+                        <span class="stage-number">4</span>
+                        <div class="stage-content">
+                            <h4>会话管理与并发优化</h4>
+                            <p>✅ HttpSession、Cookie支持、线程池模型</p>
+                        </div>
+                    </div>
+                    <div class="stage completed">
+                        <span class="stage-number">5</span>
+                        <div class="stage-content">
+                            <h4>Web应用隔离与部署</h4>
+                            <p>✅ ClassLoader隔离、动态部署、多应用支持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 轻量级Web容器 - 教学演示项目</p>
+            <p>
+                <a href="https://github.com" target="_blank">GitHub</a> |
+                <a href="docs/" target="_blank">文档</a> |
+                <a href="mailto:example@example.com">联系我们</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function testConcurrency() {
+            alert('并发测试：可以打开多个浏览器标签页同时访问来测试多线程处理能力！');
+        }
+
+        // 显示当前时间
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleString('zh-CN');
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        // 页面加载完成后每秒更新时间
+        window.addEventListener('load', function () {
+            setInterval(updateTime, 1000);
+            updateTime();
+        });
+    </script>
+
+    <div id="current-time"
+        style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">
+    </div>
+</body>
+
+</html>

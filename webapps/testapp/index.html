@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试应用 - 动态部署演示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .success {
+            background: rgba(76, 175, 80, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎉 动态部署成功！</h1>
+
+        <div class="success">
+            <h3>✅ 测试应用已自动部署</h3>
+            <p>这是一个在服务器运行时动态部署的Web应用</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🚀 第五阶段特性验证</h3>
+            <ul>
+                <li>✅ 独立的Context路径: <strong>/testapp</strong></li>
+                <li>✅ 自动扫描和部署</li>
+                <li>✅ 独立的类加载器</li>
+                <li>✅ 多应用隔离运行</li>
+                <li>✅ 热部署支持</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>应用信息</h3>
+            <p><strong>应用名称:</strong> testapp</p>
+            <p><strong>Context路径:</strong> /testapp</p>
+            <p><strong>部署方式:</strong> 动态部署（5秒扫描间隔）</p>
+            <p><strong>隔离状态:</strong> 独立ClassLoader</p>
+        </div>
+
+        <div class="info-box">
+            <h3>导航链接</h3>
+            <p><a href="/">返回ROOT应用首页</a></p>
+            <p><a href="/context">Context演示</a></p>
+            <p><a href="/api/deployment">部署统计API</a></p>
+            <p><a href="/api">API文档</a></p>
+        </div>
+
+        <div class="info-box">
+            <h3>🧪 测试说明</h3>
+            <p>这个应用证明了:</p>
+            <ol>
+                <li>可以在服务器运行时动态添加新的Web应用</li>
+                <li>每个应用都有独立的Context路径</li>
+                <li>多个应用可以同时运行而互不干扰</li>
+                <li>支持热部署，无需重启服务器</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
